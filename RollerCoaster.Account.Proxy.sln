@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollerCoaster.Account.Proxy", "RollerCoaster.Account.Proxy\RollerCoaster.Account.Proxy.csproj", "{754E0E93-34F4-477A-A552-8791AF6D0780}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Library", "1 Library", "{999BAE6B-852F-4C5D-AB50-E3B5A4FD8634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Runner", "2 Runner", "{3FA78224-F663-4279-98D5-74BEDE737798}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 Misc", "9 Misc", "{52E7B4A0-31B3-4D82-BF42-41DDBABC4F2C}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\CreateNugetPackageCI.ps1 = Scripts\CreateNugetPackageCI.ps1
+		Scripts\Publish.yml = Scripts\Publish.yml
+		RollerCoaster.Account.Proxy.Certificate.runsettings = RollerCoaster.Account.Proxy.Certificate.runsettings
+		Scripts\Test.yml = Scripts\Test.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollerCoaster.Account.Proxy.Tests", "RollerCoaster.Account.Proxy.Tests\RollerCoaster.Account.Proxy.Tests.csproj", "{216B4744-A499-4F26-977F-0C2FE1F5F1D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollerCoaster.Account.Proxy.Runner", "RollerCoaster.Account.Proxy.Runner\RollerCoaster.Account.Proxy.Runner.csproj", "{78CF866B-6958-41F0-A7FC-A3379A12AA67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{754E0E93-34F4-477A-A552-8791AF6D0780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754E0E93-34F4-477A-A552-8791AF6D0780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754E0E93-34F4-477A-A552-8791AF6D0780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754E0E93-34F4-477A-A552-8791AF6D0780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216B4744-A499-4F26-977F-0C2FE1F5F1D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216B4744-A499-4F26-977F-0C2FE1F5F1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216B4744-A499-4F26-977F-0C2FE1F5F1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216B4744-A499-4F26-977F-0C2FE1F5F1D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CF866B-6958-41F0-A7FC-A3379A12AA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CF866B-6958-41F0-A7FC-A3379A12AA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CF866B-6958-41F0-A7FC-A3379A12AA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CF866B-6958-41F0-A7FC-A3379A12AA67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{754E0E93-34F4-477A-A552-8791AF6D0780} = {999BAE6B-852F-4C5D-AB50-E3B5A4FD8634}
+		{216B4744-A499-4F26-977F-0C2FE1F5F1D6} = {999BAE6B-852F-4C5D-AB50-E3B5A4FD8634}
+		{78CF866B-6958-41F0-A7FC-A3379A12AA67} = {3FA78224-F663-4279-98D5-74BEDE737798}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE870F76-A1FD-4807-BB6F-A82C8A740FD6}
+	EndGlobalSection
+EndGlobal
