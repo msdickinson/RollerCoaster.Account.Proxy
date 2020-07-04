@@ -43,28 +43,10 @@ namespace RollerCoaster.Account.API.Proxy.Runner
                 using var provider = services.BuildServiceProvider();
                 var telemetryService = provider.GetRequiredService<ITelemetryService>();
                 var guidService = provider.GetRequiredService<IGuidService>();
+                var accountProxyService = provider.GetRequiredService<IAccountProxyService>();
 
-                {
-                    var accountProxyService = provider.GetRequiredService<IAccountProxyService>();
-
-                    //var restResponse = await accountProxyService.CreateAccountAsync(new CreateAccountRequest
-                    //{
-                    //    Email = $"{guidService.NewGuid().ToString()}@FakeMail.com",
-                    //    Password = guidService.NewGuid().ToString(),
-                    //    Username = guidService.NewGuid().ToString()
-                    //});
-                }
-
-                {
-                    var accountProxyService = provider.GetRequiredService<IAccountProxyService>();
-
-                    //var restResponse = await accountProxyService.CreateAccountAsync(new CreateAccountRequest
-                    //{
-                    //    Email = $"{guidService.NewGuid().ToString()}@FakeMail.com",
-                    //    Password = guidService.NewGuid().ToString(),
-                    //    Username = guidService.NewGuid().ToString()
-                    //});
-                }
+                var restResponse = await accountProxyService.LogAsync();
+                
                 await telemetryService.FlushAsync().ConfigureAwait(false);
 
                 applicationLifetime.StopApplication();

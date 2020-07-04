@@ -6,7 +6,7 @@ using System.Text;
 namespace RollerCoaster.Account.Proxy.Models
 {
     [ExcludeFromCodeCoverage]
-    public class CreateAccountResponse
+    public class LoginResponse
     {
         public string AccessToken { get; set; }
         public System.DateTime AccessTokenExpiresIn { get; set; }
