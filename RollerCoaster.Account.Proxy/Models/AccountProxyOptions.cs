@@ -14,6 +14,12 @@ namespace RollerCoaster.Account.API.Proxy.Models
         public ProxyOption Log { get; set; }
         public ProxyOption Login { get; set; }
         public ProxyOption UserAuthorized { get; set; }
-
+        public ProxyOption RefreshTokens { get; set; }
+        public ProxyOption UpdateEmailPreference { get; set; }
+        public ProxyOption UpdateEmailPreferenceWithToken { get; set; }
+        public ProxyOption ActivateEmail { get; set; }
+        public ProxyOption UpdatePassword { get; set; }
+        public ProxyOption ResetPassword { get; set; }
+        public ProxyOption RequestPasswordResetEmail { get; set; }
     }
 }
