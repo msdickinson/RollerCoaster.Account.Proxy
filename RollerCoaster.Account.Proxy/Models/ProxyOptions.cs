@@ -3,7 +3,7 @@
 namespace RollerCoaster.Account.Proxy.Models
 {
     [ExcludeFromCodeCoverage]
-    public class ProxyOption
+    public class ProxyOptions
     {
         public double TimeoutInSeconds { get; set; }
         public int Retrys { get; set; }

@@ -14,12 +14,11 @@ using DickinsonBros.Telemetry.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using RollerCoaster.Account.API.Proxy.Extensions;
 using RollerCoaster.Account.API.Proxy.Models;
-using RollerCoaster.Account.API.Proxy.Runner.Models;
-using RollerCoaster.Account.API.Proxy.Runner.Services;
+using RollerCoaster.Account.Proxy.Runner.Services;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -37,19 +36,20 @@ namespace RollerCoaster.Account.API.Proxy.Runner
         {
             try
             {
-                using var applicationLifetime = new ApplicationLifetime();
                 var services = InitializeDependencyInjection();
-                ConfigureServices(services, applicationLifetime);
+                ConfigureServices(services);
                 using var provider = services.BuildServiceProvider();
                 var telemetryService = provider.GetRequiredService<ITelemetryService>();
                 var guidService = provider.GetRequiredService<IGuidService>();
                 var accountProxyService = provider.GetRequiredService<IAccountProxyService>();
+                var hostApplicationLifetime = provider.GetService<IHostApplicationLifetime>();
 
                 var restResponse = await accountProxyService.LogAsync();
                 
                 await telemetryService.FlushAsync().ConfigureAwait(false);
 
-                applicationLifetime.StopApplication();
+                hostApplicationLifetime.StopApplication();
+
             }
             catch (Exception e)
             {
@@ -61,42 +61,22 @@ namespace RollerCoaster.Account.API.Proxy.Runner
             }
         }
 
-        private void ConfigureServices(IServiceCollection services, Services.ApplicationLifetime applicationLifetime)
+        private void ConfigureServices(IServiceCollection services)
         {
             services.AddOptions();
             services.AddLogging(cfg => cfg.AddConsole());
 
             //Add ApplicationLifetime
-            services.AddSingleton<IApplicationLifetime>(applicationLifetime);
+            services.AddSingleton<IHostApplicationLifetime, HostApplicationLifetime>();
 
-            //Add DateTime Service
+            //Add Stack
             services.AddDateTimeService();
-
-            //Add Stopwatch Service
             services.AddStopwatchService();
-
-            //Add Guid Service
             services.AddGuidService();
-
-            //Add Logging Service
             services.AddLoggingService();
-
-            //Add Redactor Service
             services.AddRedactorService();
-            services.Configure<RedactorServiceOptions>(_configuration.GetSection(nameof(RedactorServiceOptions)));
-
-            //Add Certificate Encryption Service
-            services.AddCertificateEncryptionService<CertificateEncryptionServiceOptions>();
-            services.Configure<CertificateEncryptionServiceOptions<RunnerCertificateEncryptionServiceOptions>>(_configuration.GetSection(nameof(RunnerCertificateEncryptionServiceOptions)));
-
-            services.AddCertificateEncryptionService<RunnerCertificateEncryptionServiceOptions>();
-            services.Configure<CertificateEncryptionServiceOptions<RunnerCertificateEncryptionServiceOptions>>(_configuration.GetSection(nameof(RunnerCertificateEncryptionServiceOptions)));
-
-            //Add Telemetry Service
+            services.AddConfigurationEncryptionService();
             services.AddTelemetryService();
-            services.AddSingleton<IConfigureOptions<TelemetryServiceOptions>, TelemetryServiceOptionsConfigurator>();
-
-            //Add DurableRest Service
             services.AddDurableRestService();
 
             //Add Account Proxy Service

@@ -8,18 +8,18 @@ namespace RollerCoaster.Account.API.Proxy.Models
     {
         public string BaseURL { get; set; }
         public int HttpClientTimeoutInSeconds { get; set; }
-        public ProxyOption AdminAuthorized { get; set; }
-        public ProxyOption CreateAdminAccount { get; set; }
-        public ProxyOption CreateUserAccount { get; set; }
-        public ProxyOption Log { get; set; }
-        public ProxyOption Login { get; set; }
-        public ProxyOption UserAuthorized { get; set; }
-        public ProxyOption RefreshTokens { get; set; }
-        public ProxyOption UpdateEmailPreference { get; set; }
-        public ProxyOption UpdateEmailPreferenceWithToken { get; set; }
-        public ProxyOption ActivateEmail { get; set; }
-        public ProxyOption UpdatePassword { get; set; }
-        public ProxyOption ResetPassword { get; set; }
-        public ProxyOption RequestPasswordResetEmail { get; set; }
+        public ProxyOptions AdminAuthorized { get; set; }
+        public ProxyOptions CreateAdminAccount { get; set; }
+        public ProxyOptions CreateUserAccount { get; set; }
+        public ProxyOptions Log { get; set; }
+        public ProxyOptions Login { get; set; }
+        public ProxyOptions UserAuthorized { get; set; }
+        public ProxyOptions RefreshTokens { get; set; }
+        public ProxyOptions UpdateEmailPreference { get; set; }
+        public ProxyOptions UpdateEmailPreferenceWithToken { get; set; }
+        public ProxyOptions ActivateEmail { get; set; }
+        public ProxyOptions UpdatePassword { get; set; }
+        public ProxyOptions ResetPassword { get; set; }
+        public ProxyOptions RequestPasswordResetEmail { get; set; }
     }
 }

@@ -1026,7 +1026,6 @@ namespace RollerCoaster.Account.Proxy.Tests
 
         #endregion
 
-
         #region UpdateEmailPreferenceAsync
 
         [TestMethod]
@@ -1858,79 +1857,79 @@ namespace RollerCoaster.Account.Proxy.Tests
 
                     accountProxyOptions.BaseURL = BASE_URL;
                     accountProxyOptions.HttpClientTimeoutInSeconds = HTTP_CLIENT_TIMEOUT_IN_SECONDS;
-                    accountProxyOptions.CreateUserAccount = new ProxyOption
+                    accountProxyOptions.CreateUserAccount = new ProxyOptions
                     {
                         Resource = CREATE_USER_ACCOUNT_PROXY_OPTION_RESOURCE,
                         Retrys = CREATE_USER_ACCOUNT_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = CREATE_USER_ACCOUNT_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.CreateAdminAccount = new ProxyOption
+                    accountProxyOptions.CreateAdminAccount = new ProxyOptions
                     {
                         Resource = CREATE_ADMIN_ACCOUNT_PROXY_OPTION_RESOURCE,
                         Retrys = CREATE_ADMIN_ACCOUNT_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = CREATE_ADMIN_ACCOUNT_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.Log = new ProxyOption
+                    accountProxyOptions.Log = new ProxyOptions
                     {
                         Resource = LOG_PROXY_OPTION_RESOURCE,
                         Retrys = LOG_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = LOG_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.Login = new ProxyOption
+                    accountProxyOptions.Login = new ProxyOptions
                     {
                         Resource = LOGIN_PROXY_OPTION_RESOURCE,
                         Retrys = LOGIN_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = LOGIN_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.UserAuthorized = new ProxyOption
+                    accountProxyOptions.UserAuthorized = new ProxyOptions
                     {
                         Resource = USER_AUTHORIZED_PROXY_OPTION_RESOURCE,
                         Retrys = USER_AUTHORIZED_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = USER_AUTHORIZED_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.AdminAuthorized = new ProxyOption
+                    accountProxyOptions.AdminAuthorized = new ProxyOptions
                     {
                         Resource = ADMIN_AUTHORIZED_PROXY_OPTION_RESOURCE,
                         Retrys = ADMIN_AUTHORIZED_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = ADMIN_AUTHORIZED_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.RefreshTokens = new ProxyOption
+                    accountProxyOptions.RefreshTokens = new ProxyOptions
                     {
                         Resource = REFRESH_TOKENS_PROXY_OPTION_RESOURCE,
                         Retrys = REFRESH_TOKENS_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = REFRESH_TOKENS_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.UpdateEmailPreference = new ProxyOption
+                    accountProxyOptions.UpdateEmailPreference = new ProxyOptions
                     {
                         Resource = UPDATE_EMAIL_PREFERENCE_OPTION_RESOURCE,
                         Retrys = UPDATE_EMAIL_PREFERENCE_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = UPDATE_EMAIL_PREFERENCE_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.UpdateEmailPreferenceWithToken = new ProxyOption
+                    accountProxyOptions.UpdateEmailPreferenceWithToken = new ProxyOptions
                     {
                         Resource = UPDATE_EMAIL_PREFERENCE_WITH_TOKEN_OPTION_RESOURCE,
                         Retrys = UPDATE_EMAIL_PREFERENCEE_WITH_TOKEN_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = UPDATE_EMAIL_PREFERENCEE_WITH_TOKEN_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.ActivateEmail = new ProxyOption
+                    accountProxyOptions.ActivateEmail = new ProxyOptions
                     {
                         Resource = ACTIVATE_EMAIL_OPTION_RESOURCE,
                         Retrys = ACTIVATE_EMAIL_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = ACTIVATE_EMAIL_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.UpdatePassword = new ProxyOption
+                    accountProxyOptions.UpdatePassword = new ProxyOptions
                     {
                         Resource = UPDATE_PASSWORD_OPTION_RESOURCE,
                         Retrys = UPDATE_PASSWORD_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = UPDATE_PASSWORD_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.ResetPassword = new ProxyOption
+                    accountProxyOptions.ResetPassword = new ProxyOptions
                     {
                         Resource = RESET_PASSWORD_OPTION_RESOURCE,
                         Retrys = RESET_PASSWORD_PROXY_OPTION_RETRYS,
                         TimeoutInSeconds = RESET_PASSWORD_PROXY_OPTION_TIMEOUT_IN_SECONDS
                     };
-                    accountProxyOptions.RequestPasswordResetEmail = new ProxyOption
+                    accountProxyOptions.RequestPasswordResetEmail = new ProxyOptions
                     {
                         Resource = REQUEST_PASSWORD_RESET_EMAIL_OPTION_RESOURCE,
                         Retrys = REQUEST_PASSWORD_RESET_EMAIL_PROXY_OPTION_RETRYS,
