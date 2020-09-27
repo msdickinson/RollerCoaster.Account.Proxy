@@ -644,7 +644,7 @@ namespace RollerCoaster.Account.Proxy.Tests
                     var observedRetrys = (int?)null;
                     var observedTimeoutInSeconds = (double?)null;
 
-                    var expectedMethod = HttpMethod.Post;
+                    var expectedMethod = HttpMethod.Get;
                     var expectedRequestUri = new Uri($"{USER_AUTHORIZED_PROXY_OPTION_RESOURCE}", UriKind.Relative);
 
                     var durableRestServiceMock = serviceProvider.GetMock<IDurableRestService>();
@@ -777,7 +777,7 @@ namespace RollerCoaster.Account.Proxy.Tests
                     var observedRetrys = (int?)null;
                     var observedTimeoutInSeconds = (double?)null;
 
-                    var expectedMethod = HttpMethod.Post;
+                    var expectedMethod = HttpMethod.Get;
                     var expectedRequestUri = new Uri($"{ADMIN_AUTHORIZED_PROXY_OPTION_RESOURCE}", UriKind.Relative);
 
                     var durableRestServiceMock = serviceProvider.GetMock<IDurableRestService>();

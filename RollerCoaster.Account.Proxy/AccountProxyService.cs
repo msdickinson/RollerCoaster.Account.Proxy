@@ -86,7 +86,7 @@ namespace RollerCoaster.Account.API.Proxy
         {
             var httpRequestMessage = new HttpRequestMessage
             {
-                Method = HttpMethod.Post,
+                Method = HttpMethod.Get,
                 RequestUri = new Uri(_accountProxyOptions.UserAuthorized.Resource, UriKind.Relative)
             };
 
@@ -99,7 +99,7 @@ namespace RollerCoaster.Account.API.Proxy
         {
             var httpRequestMessage = new HttpRequestMessage
             {
-                Method = HttpMethod.Post,
+                Method = HttpMethod.Get,
                 RequestUri = new Uri(_accountProxyOptions.AdminAuthorized.Resource, UriKind.Relative)
             };
 
