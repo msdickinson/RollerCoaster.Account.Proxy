@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
-namespace RollerCoaster.Account.Proxy.Models
+namespace RollerCoaster.Account.Proxy.Models.RefreshTokens
 {
     [ExcludeFromCodeCoverage]
-    public class CreateAccountResponse
+    public class RefreshTokensResponse
     {
         public string AccessToken { get; set; }
         public System.DateTime AccessTokenExpiresIn { get; set; }
