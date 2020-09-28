@@ -85,7 +85,6 @@ namespace RollerCoaster.Account.API.Proxy.Runner
                 new Uri(_configuration[$"{nameof(AccountProxyOptions)}:{nameof(AccountProxyOptions.BaseURL)}"]),
                 new TimeSpan(0,0, Convert.ToInt32(_configuration[$"{nameof(AccountProxyOptions)}:{nameof(AccountProxyOptions.HttpClientTimeoutInSeconds)}"]))
             );
-            services.Configure<AccountProxyOptions>(_configuration.GetSection(nameof(AccountProxyOptions)));
         }
 
         IServiceCollection InitializeDependencyInjection()
