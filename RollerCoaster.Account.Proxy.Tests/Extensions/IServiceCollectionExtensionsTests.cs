@@ -4,6 +4,9 @@ using System;
 using RollerCoaster.Account.API.Proxy.Extensions;
 using System.Linq;
 using RollerCoaster.Account.API.Proxy;
+using Microsoft.Extensions.Options;
+using RollerCoaster.Account.Proxy.Configurators;
+using RollerCoaster.Account.API.Proxy.Models;
 
 namespace RollerCoaster.Account.Proxy.Tests.Extensions
 {
@@ -26,6 +29,10 @@ namespace RollerCoaster.Account.Proxy.Tests.Extensions
             Assert.IsTrue(serviceCollection.Any(serviceDefinition => serviceDefinition.ServiceType == typeof(IAccountProxyService) &&
                                                        serviceDefinition.ImplementationFactory != null &&
                                                        serviceDefinition.Lifetime == ServiceLifetime.Transient));
+
+            Assert.IsTrue(serviceCollection.Any(serviceDefinition => serviceDefinition.ServiceType == typeof(IConfigureOptions<AccountProxyOptions>) &&
+                               serviceDefinition.ImplementationType == typeof(AccountProxyOptionsConfigurator) &&
+                               serviceDefinition.Lifetime == ServiceLifetime.Singleton));
         }
     }
 }
