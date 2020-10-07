@@ -80,11 +80,7 @@ namespace RollerCoaster.Account.API.Proxy.Runner
             services.AddDurableRestService();
 
             //Add Account Proxy Service
-            services.AddAccountProxyService
-            (
-                new Uri(_configuration[$"{nameof(AccountProxyOptions)}:{nameof(AccountProxyOptions.BaseURL)}"]),
-                new TimeSpan(0,0, Convert.ToInt32(_configuration[$"{nameof(AccountProxyOptions)}:{nameof(AccountProxyOptions.HttpClientTimeoutInSeconds)}"]))
-            );
+            services.AddAccountProxyService();
         }
 
         IServiceCollection InitializeDependencyInjection()
