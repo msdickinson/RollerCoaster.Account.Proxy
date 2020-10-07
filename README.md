@@ -8,7 +8,7 @@ Account Proxy
 
 Features
 * All API End Points from Account API
-* Polciy based retrys and timeouts.
+* Policy based retrys and timeouts.
 * Logs for all successful and exceptional runs
 * Telemetry for all calls
 
