@@ -1,8 +1,6 @@
 # RollerCoaster.Account.Proxy
 
-<a href="https://www.nuget.org/packages/RollerCoaster.Account.Proxy/">
-    <img src="https://img.shields.io/nuget/v/RollerCoaster.Account.Proxy">
-</a>
+<a href="https://dev.azure.com/marksamdickinson/rollercoaster/_build/latest?definitionId={BUILDID}&amp;branchName=master"> <img alt="Azure DevOps builds (branch)" src="https://img.shields.io/azure-devops/build/marksamdickinson/rollercoaster/{BUILDID}/master"> </a> <a href="https://dev.azure.com/marksamdickinson/rollercoaster/_build/latest?definitionId={BUILDID}&amp;branchName=master"> <img alt="Azure DevOps coverage (branch)" src="https://img.shields.io/azure-devops/coverage/marksamdickinson/rollercoaster/{BUILDID}/master"> </a><a href="https://dev.azure.com/marksamdickinson/rollercoaster/_release?_a=releases&view=mine&definitionId={RELEASEID}"> <img alt="Azure DevOps releases" src="https://img.shields.io/azure-devops/release/marksamdickinson/{RELEASECODE}"> </a><a href="https://www.nuget.org/packages/{PACKAGENAME}/"><img src="https://img.shields.io/nuget/v/{PACKAGENAME}"></a>
 
 Account Proxy
 
@@ -11,8 +9,6 @@ Features
 * Policy based retrys and timeouts.
 * Logs for all successful and exceptional runs
 * Telemetry for all calls
-
-<a href="https://dev.azure.com/marksamdickinson/RollerCoaster/_build?definitionScope=%5CRollerCoaster.Account.Proxy">Builds</a>
 
 <h2>Example Usage</h2>
 
